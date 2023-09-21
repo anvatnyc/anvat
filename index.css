@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "Lobster";
+  src: url("fonts/Lobster/Lobster-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Varela_round";
+  src: url("fonts/Varela_Round/OFL.txt") format("truetype");
+}
+
+body {
+  background-image: linear-gradient(
+      rgba(249, 249, 249, 0.7),
+      rgba(249, 249, 249, 0.7)
+    ),
+    url("img/background.JPG");
+  font-family: "Varela_round";
+  font-size: larger;
+  text-align: center;
+}
+
+#banner {
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+}
+
+.banner-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-banner 8s linear infinite;
+  line-height: 45px;
+}
+
+.divider {
+  padding: 0 10px;
+}
+
+@keyframes scroll-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#navbar {
+  margin-top: 100px;
+}
+
+#navbar ul li {
+  display: inline;
+  margin-right: 30px;
+}
+
+#navbar ul li a {
+  padding: 14px 20px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+#instagramlogo,
+#facebooklogo {
+  height: 100px;
+  width: auto;
+}
+
+#instagramlogo:hover,
+#facebooklogo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 15px white(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-family: "Lobster";
+  font-size: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+h1.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-family: "Lobster";
+}
+
+#products {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.product {
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 300px;
+  background-color: #f9f9f9;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+#products.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.add-to-cart {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1px;
+  height: 4em;
+  width: 15em;
+  border: none;
+  border-radius: 40px;
+  margin-top: 15px;
+}
+
+.add-to-cart:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.add-to-cart-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.add-to-cart .container {
+  z-index: -1;
+  width: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50px);
+  transition: all 0.4s;
+}
+
+.increment-button,
+.decrement-button {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  color: #333;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: medium;
+  margin-right: 5px;
+}
+
+.increment-button:hover,
+.decrement-button:hover {
+  background-color: #ddd;
+}
+
+.quantity-input {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: medium;
+  vertical-align: middle;
+}
+
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.finalize-cart-button {
+  font-size: 18px;
+  background: linear-gradient(to bottom, #4dc7d9 0%, #66a6ff 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s;
+  text-align: center;
+  margin-top: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.finalize-cart-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.finalize-cart-button span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+.finalize-cart-button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+.finalize-cart-button .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+.finalize-cart-button:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.finalize-cart-button:hover svg {
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 700px) {
+  #logo {
+    width: 100%;
+    height: auto;
+  }
+
+  #instagramlogo,
+  #facebooklogo {
+    height: 60px;
+    width: auto;
+  }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ăn Vặt NYC</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" href="img/anvat.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="banner">
+        <span class="banner-text">Pick up at Queens/Manhattan <span class="divider"> | </span> Shipping Locally Every
+            Sunday</span>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <a href="https://jackhoang99.github.io/anvatnyc/">
+            <img id="logo" src="img/anvat.png" alt="Logo">
+        </a>
+        <ul>
+            <li><a href="https://www.instagram.com/anvat.nyc/?igshid=MzRlODBiNWFlZA%3D%3D">
+                    <img id="instagramlogo" src="img/instagram.png" alt="Instagram">
+                </a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61551289988407&mibextid=LQQJ4d">
+                    <img id="facebooklogo" src="img/facebook.png" alt="Facebook">
+                </a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1 class="our-products-title">Our Products</h1>
+    </section>
+    <!-- E-commerce Product Section -->
+    <section id="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <h2>Ăn Vặt Signature 1</h2>
+            <div class="product-image" data-images="img/avs_1.png,img/avs_1(2).png,img/avs_1(3).png">
+                <img src="img/avs_1.png" alt="Product 1">
+            </div>
+            <p>Bánh tráng dẻo tôm cuộn bơ hành phi muối nhuyễn</p>
+
+            <div class="quantity-wrapper">
+                <button class="decrement">-</button>
+                <input type="number" class="quantity-input" value="0">
+                <button class="increment">+</button>
+            </div>
+            <button class="add-to-cart" data-product="Ăn Vặt Signature 1">Add to Cart</button>
+
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <h2>Ăn Vặt Signature 2</h2>
+            <div class="product-image" data-images="img/avs_2.png,img/avs_2(2).png,img/avs_2(3).png">
+                <img src="img/avs_2.png" alt="Product 2">
+            </div>
+            <p>Bánh tráng phơi sương muối nhuyễn hành phi</p>
+            <div class="quantity-wrapper">
+                <button class="decrement">-</button>
+                <input type="number" class="quantity-input" value="0">
+                <button class="increment">+</button>
+            </div>
+            <button class="add-to-cart" data-product="Ăn Vặt Signature 2">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <h2>Ăn Vặt Signature 3</h2>
+            <div class="product-image" data-images="img/avs_3.png,img/avs_3(2).png,img/avs_3(3).png">
+                <img src="img/avs_3.png" alt="Product 3">
+            </div>
+            <p>Bánh tráng phơi sương chấm sốt me bơ hành phi đậu phộng</p>
+            <div class="quantity-wrapper">
+                <button class="decrement">-</button>
+                <input type="number" class="quantity-input" value="0">
+                <button class="increment">+</button>
+            </div>
+            <button class="add-to-cart" data-product="Ăn Vặt Signature 3">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <h2>Special Combo</h2>
+            <div class="product-image" data-images="img/avs_4.png,img/avs_4(2).png,img/avs_4(3).png">
+                <img src="img/avs_4.png" alt="Product 4">
+            </div>
+            <p>Combo bánh tráng tròn phơi sương bơ muối tép và sốt tắc</p>
+            <div class="quantity-wrapper">
+                <button class="decrement">-</button>
+                <input type="number" class="quantity-input" value="0">
+                <button class="increment">+</button>
+            </div>
+            <button class="add-to-cart" data-product="Special Combo">Add to Cart</button>
+        </div>
+        <br>
+
+        <button class="finalize-cart-button">
+            <div class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                    </path>
+                </svg>
+            </div>
+            <span>Finalized Cart</span>
+        </button>
+
+
+
+        <div id="customAlert" style="display: none;">
+            <p id="cartMessage"></p>
+            <button id="copyBtn">Copy</button>
+            <a href="https://ig.me/m/anvat.nyc" target="_blank">Go to Instagram</a>
+        </div>
+
+
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>
